@@ -1,0 +1,10 @@
+<h1>
+	{{page_title}}
+</h1>
+<div *ngFor="let doc of documents">
+	<h3>{{ doc.title }}</h3>
+	<p>{{ doc.description}}</p>
+	<a href="{{ doc.file_url }}">Link</a>
+	<p>{{doc.updated_at}}</p>
+	<p>{{doc.image_url}}</p>
+</div>
