@@ -5,6 +5,7 @@ import { AppComponent} from './app.component'
 import { DocumentComponent} from './document/document.component'
 import { ProposalComponent} from './proposal/proposal.component'
 import { ProposalNewComponent} from './proposal/proposal-new.component'
+import { ProposalShowComponent} from './proposal/proposal-show.component'
 
 
 const routes:Routes = [
@@ -13,7 +14,8 @@ const routes:Routes = [
  	{ path: 'application' ,component: AppComponent },
  	{ path: 'document' ,component: DocumentComponent },
 	{ path: 'proposal' ,component: ProposalComponent },
-	{ path: 'proposal/new' ,component: ProposalNewComponent }
+	{ path: 'proposals/new' ,component: ProposalNewComponent },
+	{ path: 'proposal/:id' ,component: ProposalShowComponent }
 
 ]
 

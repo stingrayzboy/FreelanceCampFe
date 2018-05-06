@@ -2,5 +2,5 @@
 	Proposal
 </h1>
 <div *ngFor="let doc of proposals">
-	{{doc.customer}}	
+	<a routerLink="{{doc.id}}">{{doc.customer}}</a>	
 </div>
