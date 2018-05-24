@@ -22,7 +22,9 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "bounce.js": "^0.8.2",
     "core-js": "^2.4.1",
+    "noty": "^3.2.0-beta",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

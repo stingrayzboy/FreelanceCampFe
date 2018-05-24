@@ -3,7 +3,8 @@ import { Proposal } from './proposal'
 
 @Component({
 	selector:'app',
-	templateUrl:'./proposal.component.html'
+	templateUrl:'./proposal.component.html',
+	styleUrls: ['./proposal.component.css']
 })
 export class ProposalComponent{
 	proposalOne:Proposal = new Proposal(1,'Faraz Noor','http://faraznoor.live',"Ruby",120,10,10,'faraznoor75@gmail.com')

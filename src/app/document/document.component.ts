@@ -13,19 +13,19 @@ export class DocumentComponent {
 			description:"This is a test",
 			file_url:"boomla",
 			updated_at:"string",
-			image_url:"boomlaaaaa"
+			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
 		},{	
 			title:"Faraz2",
 			description:"This is a test",
 			file_url:"http://google.com",
 			updated_at:"string",
-			image_url:"boomlaaaaa"
+			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
 		},{	
 			title:"Faraz3",
 			description:"This is a test",
 			file_url:"boomla",
 			updated_at:"string",
-			image_url:"boomlaaaaa"
+			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
 		}
 	]
 }

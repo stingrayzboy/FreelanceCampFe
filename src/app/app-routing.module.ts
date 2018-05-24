@@ -13,7 +13,7 @@ const routes:Routes = [
  	{ path: 'home' ,component: HomepageComponent },
  	{ path: 'application' ,component: AppComponent },
  	{ path: 'document' ,component: DocumentComponent },
-	{ path: 'proposal' ,component: ProposalComponent },
+	{ path: 'proposals' ,component: ProposalComponent },
 	{ path: 'proposals/new' ,component: ProposalNewComponent },
 	{ path: 'proposal/:id' ,component: ProposalShowComponent }
 
