@@ -1,31 +1,31 @@
-import { Component } from '@angular/core'
+import { Component,OnInit } from '@angular/core'
 import { Document } from './document'
+import { DocumentService } from './document.service'
+import { Observable } from 'rxjs/Rx'
+
 @Component({
 	selector:'app',
-	templateUrl:'./document.component.html'
+	templateUrl:'./document.component.html',
+	providers:[ DocumentService ]
 	//template:'<h1>Documents Page</h1>'	
 })
-export class DocumentComponent {
+export class DocumentComponent implements OnInit{
 	page_title:string="Yolo"
-	documents:Document[]=[
-		{	
-			title:"Faraz",
-			description:"This is a test",
-			file_url:"boomla",
-			updated_at:"string",
-			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
-		},{	
-			title:"Faraz2",
-			description:"This is a test",
-			file_url:"http://google.com",
-			updated_at:"string",
-			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
-		},{	
-			title:"Faraz3",
-			description:"This is a test",
-			file_url:"boomla",
-			updated_at:"string",
-			image_url:"https://news.bitcoin.com/wp-content/uploads/2017/02/Bitcoin-Freelance-Marketplace-Rein-Launches-in-Beta.png"
-		}
-	]
+	documents:Document[]
+	mode="Observable"
+	errorMessage:string;
+	constructor(
+		private documentService:DocumentService
+		){}
+	ngOnInit(){
+		let timer = Observable.timer(0, 5000)
+		timer.subscribe(()=>this.getDocuments())
+	}
+	getDocuments(){
+		this.documentService.getDocuments()
+			.subscribe(
+				documents => this.documents = documents,
+				error => this.errorMessage = <any>error
+				)
+	}
 }
