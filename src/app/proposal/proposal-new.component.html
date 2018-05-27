@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div>
-				<form #proposalForm="ngForm">
+				<form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm">
 					<div class="form-group">
 						<label for="customer">Customer Name</label>
 						<input type="text"
@@ -116,8 +116,25 @@
 										[(ngModel)]="proposal.client_email"
 						>
 					</div>
+					<div class="form-group">
+						<button type="submit" 
+						class="btn btn-outline-info btn-lg"
+						[disabled]="!proposalForm.form.valid"
+						[hidden]="submitted"
+						>
+							Generate Proposal
+						</button>
+					</div>
+					<div
+					[hidden]="!submitted"
+					class="alert alert-success"
+					role="alert"
 
+					>
+						Your Proposal has been generated <a routerLink="/proposals"> See all Proposals</a>
+					</div>
 				</form>
+
 			</div>
 		</div>
 		<div class="col-md-6 text-justify">

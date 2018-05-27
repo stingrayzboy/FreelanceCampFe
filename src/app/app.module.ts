@@ -9,6 +9,8 @@ import { HomepageComponent } from './homepage/homepage.component'
 import { AppComponent } from './app.component'
 import { DocumentComponent } from './document/document.component'
 import { DocumentService } from './document/document.service'
+import { ProposalService } from './proposal/proposal.service'
+
 import { ProposalComponent } from './proposal/proposal.component'
 import { ProposalNewComponent} from './proposal/proposal-new.component'
 import { ProposalShowComponent} from './proposal/proposal-show.component'
@@ -32,7 +34,8 @@ import { ProposalShowComponent} from './proposal/proposal-show.component'
     NgbModule.forRoot()
   ],
   providers: [
-    DocumentService
+    DocumentService,
+    ProposalService
   ],
   bootstrap: [AppComponent]
 })
